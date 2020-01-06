@@ -1,0 +1,42 @@
+package com.app;
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Emp{
+	int id ;
+	Emp(int id){
+		this.id = id;
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.id;
+	}
+	@Override
+	public boolean equals(Object obj) {
+	return this.hashCode()==obj.hashCode()?true:false;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Emp [id1=" + id + "]";
+	}
+}
+
+public class Demo {
+	
+	 static Set<Emp> list1 = new HashSet<>();
+	 public static void main(String[] args) {
+		 Emp e1 = new Emp(7);
+		 Emp e2 = new Emp(7);
+		 list1.add(e1);
+		 list1.add(e2);
+		 System.out.println(list1); 
+		 
+	}
+	 
+	 public void m1() {}
+	 
+}
